@@ -1,0 +1,62 @@
+---
+title: "Notas para el uso de Git"
+format:
+  html:
+    embed-resources: true
+editor: visual
+---
+
+## 1. Setup inicial de Git
+
+### 1.1 User name and email
+
+::: panel-tabset
+## Git Bash
+
+``` bash
+git config --global user.name "<nombre usuario>"
+git config --global user.email "<email usuario asociado a github>"
+```
+
+## R
+
+``` r
+usethis::use_git_config(user.name = "<nombre usuario>",
+                        user.email = "<email usuario asociado a github>")
+```
+:::
+
+Se utiliza un `"<nombre usuario>"` para dejar registro del usuario o persona que realiza acciones en Git. Este nombre puede ser inventado y no necesariamente ser el mismo que se utiliza en la cuenta de GitHub.
+
+Si se trabaja desde diferentes lugares se puede agregar esta información al nombre de usuario, por ejemplo, `sebavr-home`, `seba-ocuc` o `seba_ws`.
+
+*(agregar que es posible hacer privado el email principal y utilizar otro que provee github, el cual habría que definirlo aquí)*
+
+### 1.2 Git text editor
+
+::: panel-tabset
+## Windows
+
+``` bash
+# Notepad++
+git config --global core.editor "'c:/program files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+```
+
+``` bash
+# Notepad
+git config --global core.editor "c:/Windows/System32/notepad.exe"
+```
+
+## Linux
+
+``` bash
+#gedit    
+git config --global core.editor "gedit --wait --new-window"
+```
+:::
+
+### 1.3 Revisar propiedades globales
+
+``` bash
+git config --global --list
+```
