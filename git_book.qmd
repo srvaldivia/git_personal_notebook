@@ -4,9 +4,11 @@ format:
   html:
     embed-resources: true
 editor: visual
+editor_options: 
+  chunk_output_type: console
 ---
 
-## 1. Setup inicial de Git
+## 1. Git initial setup
 
 ### 1.1 User name and email
 
@@ -60,3 +62,33 @@ git config --global core.editor "gedit --wait --new-window"
 ``` bash
 git config --global --list
 ```
+
+## 2. Credentials setup via HTTPS
+
+### 2.1 Create Personal Access Token (PAT)
+
+```{r}
+#| eval: false
+
+usethis::create_github_token()
+```
+
+### 2.2 Store credentials
+
+```{r}
+#| eval: false
+gitcreds::gitcreds_get()
+gitcreds::gitcreds_set()
+
+usethis::gh_token_help()
+usethis::git_sitrep()
+gh::gh_whoami()
+gh::gh_token()
+
+credentials::set_github_pat()
+
+
+gitcreds::gitcreds_set()
+```
+
+### 2.3 Check credentials
