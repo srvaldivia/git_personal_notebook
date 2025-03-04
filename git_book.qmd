@@ -92,3 +92,13 @@ gitcreds::gitcreds_set()
 ```
 
 ### 2.3 Check credentials
+
+## References
+
+<https://swcarpentry.github.io/git-novice/02-setup.html>
+
+<file:///C:/Program%20Files/Git/mingw64/share/doc/git-doc/gittutorial.html>
+
+<https://support.posit.co/hc/en-us/articles/200532317-Writing-R-Package-Documentation>
+
+<https://noaa-edab.github.io/presentations/20191009_createRPackages_Beet.html#26><https://r-pkgs.org/preface.html#colophon>
